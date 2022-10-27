@@ -1,0 +1,99 @@
+body {
+    background: #dde5f4;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7px;
+    padding: 7px;
+    background-color: #f1f7fe;
+
+}
+
+.text-h1 {
+    font-size: 56px;
+}
+
+.text-h3 {
+    font-size: 21px;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+    height: 411px;
+    border: 1px solid black;
+    background-color: #f1f7fe;
+    border-radius: 41px;
+}
+
+.login-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-login {
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 7px;
+    background-color: white;
+}
+
+input#username {
+    border: 0px;
+}
+
+input#username:focus {
+    outline: none;
+}
+
+
+
+.pass-login {
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 7px;
+    background-color: white;
+    margin-top: 14px;
+}
+
+input#password {
+    border: 0px;
+}
+
+input#password:focus {
+    outline: none;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-login {
+    margin-top: 14px;
+    width: 100%;
+}
+
+.submit-login button{
+        width: 100%;
+        height: 27px;
+        border-radius: 14px;
+        background: #3e4684;
+        color: white;
+}

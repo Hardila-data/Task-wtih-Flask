@@ -1,0 +1,94 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="navBar">
+    <div class=""></div>
+    <h1>Task App</h1>
+    <div class='logout'>
+        <a href="{{url_for('logout')}}">Logout</a>
+    </div>
+</div>
+
+<!--1st Section add new task-->
+<div class="sections">
+    <h2>Add new task</h2>
+    <form action="{{url_for('new_task')}}", method="post">
+        {{ form.csrf_token }}
+        <div>
+            {{form.name.label}}
+            {{form.name}}
+        </div>
+        <div>
+            {{form.due_date.label}}
+            {{form.due_date}}
+        </div>
+        <div>
+            {{form.priority.label}}
+            {{form.priority}}
+        </div>
+    </form>
+</div>
+<!--End 1st Section add new task-->
+
+<!--2nd Section open the tasks-->
+<div class="sections">
+    <h2>Open Tasks</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Date</th>
+                <th>Priority</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+            {% for  task in open_tasks %}
+                <tr>
+                    <td>{{task.name}}</td>
+                    <td>{{task.due_date}}</td>
+                    <td>{{task.priority}}</td>
+                    <td>
+                        <a href="{{url_for('delete_entry', task_id = task.task_id)}}">Delete</a>
+                        <a href="{{url_for('complete', task_id = task.task_id)}}">Mark as Complete</a>
+                    </td>
+                    
+                </tr>
+            
+            {% endfor %}
+        
+    </table>
+</div>
+<!--End 2nd Section open the tasks-->
+
+<!--3rd Section closed tasks-->
+<div class="sections">
+    <h2>Closed Tasks</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Date</th>
+                <th>Priority</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+            {% for  task in closed_tasks %}
+                <tr>
+                    <td>{{task.name}}</td>
+                    <td>{{task.due_date}}</td>
+                    <td>{{task.priority}}</td>
+                    <td>
+                        <a href="{{url_for('delete_entry', task_id = task.task_id)}}">Delete</a>
+                    </td>
+                    
+                </tr>
+            
+            {% endfor %}
+        
+    </table>
+    
+</div>
+<!--End 3rd Section closed tasks-->
+
+
+{% endblock  %}

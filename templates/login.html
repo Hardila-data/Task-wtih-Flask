@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="navBar">
+    <div class="text-h1">Task App developed with Flask</div>
+</div>
+
+<br>
+<br>
+
+<div class='login-section'>
+    
+
+    <form action="/" method="post" class="login-form">
+
+        <div class="text-h3">Please login to access your task list.</div>
+
+        <div class="form-fields">
+            <div class="user-login">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="{{request.form.username}}" placeholder="defaultUser">
+            </div>
+            
+            <div class="pass-login">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="{{request.form.password}}" placeholder="..........">
+            </div>
+
+            <div class="submit-login">
+                <button type="submit">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock  %}
