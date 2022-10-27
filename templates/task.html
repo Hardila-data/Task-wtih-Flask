@@ -4,15 +4,16 @@
 <div class="navBar">
     <div class=""></div>
     <h1>Task App</h1>
-    <div class='logout'>
-        <a href="{{url_for('logout')}}">Logout</a>
-    </div>
+</div>
+
+<div class='logout'>
+    <a href="{{url_for('logout')}}">Logout</a>
 </div>
 
 <!--1st Section add new task-->
 <div class="sections">
     <h2>Add new task</h2>
-    <form action="{{url_for('new_task')}}", method="post">
+    <form action="{{url_for('new_task')}}", method="post" class="add-task">
         {{ form.csrf_token }}
         <div>
             {{form.name.label}}
@@ -26,6 +27,9 @@
             {{form.priority.label}}
             {{form.priority}}
         </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
     </form>
 </div>
 <!--End 1st Section add new task-->
@@ -33,7 +37,7 @@
 <!--2nd Section open the tasks-->
 <div class="sections">
     <h2>Open Tasks</h2>
-    <table>
+    <table class="table-task">
         <thead>
             <tr>
                 <th>Task Name</th>
@@ -63,7 +67,7 @@
 <!--3rd Section closed tasks-->
 <div class="sections">
     <h2>Closed Tasks</h2>
-    <table>
+    <table class="table-task">
         <thead>
             <tr>
                 <th>Task Name</th>

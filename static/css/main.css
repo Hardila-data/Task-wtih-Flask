@@ -97,3 +97,39 @@ input#password:focus {
         background: #3e4684;
         color: white;
 }
+
+.logout {
+    margin: 7px;
+}
+
+.sections {
+    margin: 7px;
+}
+
+.add-task{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.add-task div{
+    margin: 7px;
+    
+}
+
+
+.table-task{
+    border-collapse: collapse;
+}
+
+.table-task td, .table-task th{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.table-task th{
+    background-color:#3e4684
+}
+.table-task a{
+        color: black;
+        margin: 3.5px;
+}
