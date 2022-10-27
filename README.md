@@ -20,3 +20,4 @@
 ├───run.py              <- Execute this file to run the application
 ├───task.db             <- Database to save the tasks
 └───views.py            <- The logic of the web
+-------------------------------------------------------------------------------
